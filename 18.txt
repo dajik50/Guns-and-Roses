@@ -1,0 +1,101 @@
+在线词典
+
+操作步骤：
+
+   1.  确定技术方案
+       并发：   fork多进程
+
+       套接字：  tcp套接字
+
+       细节：注册信息，注册完进入哪个界面，最近10条记录还是所有
+
+            id 用户名  密码
+            注册完回到一级界面
+            最近10条历史记录
+
+       两个界面如何切换，结构怎样
+
+
+   2.  构建数据表
+       words  单词表
+       创建其他数据表
+
+       user: id  name  passwd
+
+        create table user (id int primary key auto_increment,name varchar(32) not null unique,passwd char(128) not null);
+
+       hist: id  name  word  time
+
+             create table hist (id int primary key auto_increment,name varchar(32) not null,word varchar(32) not null,time datetime default now());
+
+             id  name_id  word  time
+
+             create table hist1 (id int primary key auto_increment,word varchar(32) not null,time datetime default now(),user_id int,constraint user_fk foreign key(user_id) references user(id));
+
+   3.  封装设计，搭建代码块结构
+       有几个功能模块
+
+       网络搭建
+       注册
+       登录
+
+       查单词
+       历史记录
+
+
+   4.  搭建并发通信模型
+       确定请求协议
+
+       注册   Register
+       登录   Login
+       查单词  Query
+       历史记录  History
+       退出   Exit
+
+   5.  对各个功能模块进行功能分析
+
+       注册
+       登录
+       查单词
+       历史记录
+       退出
+
+
+
+cookie：
+
+    import   getpass
+
+    passwd = getpass.getpass()
+    功能：隐藏输入内容
+    参数：输入提示，默认为Password:
+    返回值：输入内容
+
+    import hashlib
+
+    hash = hashlib.md5()
+    功能： 生成加密算法对象
+    参数： 作为盐的字节串
+
+
+    hash.update(bytes)
+    功能：加密转换
+    参数：密码的字节串
+
+    passwd = hash.hexdigest()
+    功能：获取加密后的密码
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
