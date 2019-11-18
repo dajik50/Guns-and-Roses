@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/blog.css">
+    <script src="/static/js/jquery.min.js"></script>
+</head>
+<body>
+    <img id="bg" width="100%" src="/static/images/b.jpg" alt="">
+    <div id="log">
+        <h3>登录</h3>
+        <hr>
+        <form action="" onsubmit="return sub()">
+            <div>
+                <input type="text"
+                       placeholder="请输入用户名"
+                       class="txt"
+                       id="username"
+                       name="username">
+            </div>
+            <div>
+                <input type="password"
+                       placeholder="请输入密码"
+                       class="txt"
+                       id="userpass"
+                       name="userpass">
+            </div>
+            <div>
+                <input type="submit"
+                       class="btn"
+                       value="提交">
+            </div>
+        </form>
+        <script>
+            function sub(){
+                if($("#username").val()=="" || $("#userpass").val()==""){
+                  if($("#username").val()==""){
+                     alert("用户名不能为空")
+                     $("#username").focus();
+                     return false;
+                  }else{
+                     alert("密码不能为空")
+                     $("#userpass").focus();
+                     return false;
+                  }
+                }else{
+                  return true;
+                }
+            }
+        </script>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/blog.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/scrollReveal.js"></script>
+</head>
+<body>
+    <!-- 内嵌导航栏模板文件  -->
+　　{%  include 'header.html' %}
+    {%  import 'macros.html' as index_macro %}
+
+    <div class="bgimg"></div>
+
+    {{ index_macro.list_tip('图片列表','不要轻易放弃，学习成长的路上，我们长路漫漫，只因学无止境')}}
+
+    <div class="items">
+
+       {{ index_macro.list_img('/static/images/a.jpg',450,'python基础学习总结python基础学习总结python基础学习总结')}}
+       {{ index_macro.list_img('/static/images/b.jpg',451,'python基础学习总结python基础学习总结python基础学习总结')}}
+       {{ index_macro.list_img('/static/images/c.jpg',452,'python基础学习总结python基础学习总结python基础学习总结')}}
+       {{ index_macro.list_img('/static/images/d.jpg',453,'python基础学习总结python基础学习总结python基础学习总结')}}
+
+    </div>
+    <div class="items">
+
+       {{ index_macro.list_img('/static/images/a.jpg',450,'python基础学习总结python基础学习总结python基础学习总结')}}
+       {{ index_macro.list_img('/static/images/b.jpg',451,'python基础学习总结python基础学习总结python基础学习总结')}}
+       {{ index_macro.list_img('/static/images/c.jpg',452,'python基础学习总结python基础学习总结python基础学习总结')}}
+       {{ index_macro.list_img('/static/images/d.jpg',453,'python基础学习总结python基础学习总结python基础学习总结')}}
+
+    </div>
+    {%  include 'footer.html' %}
+    <script src="/static/js/index.js"></script>
+    <script>
+        //调用获取焦点样式的函数
+        getFocus($("#l3 a"))
+    </script>
+</body>
+</html>
