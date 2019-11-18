@@ -1,0 +1,414 @@
+/*通用的样式*/
+ul,h3,p,table,body{
+    padding:0;
+    margin:0
+}
+body{
+    background-color:#ccc;
+}
+ul{
+    list-style-type:none;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.cb{
+    clear:both;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+/*通用样式编写结束*/
+
+/*导航栏样式*/
+#nav{
+    width:100%;
+    background-color:#555;
+    color:#fff;
+    position:fixed;
+    top:0;
+    z-index:9
+}
+#nav .con{
+    width:1140px;
+    margin:0 auto;
+    overflow:hidden;
+    height:80px;
+    line-height:80px;
+}
+#nav .con .log{
+    float:left;
+    font-size:28px;
+    margin-right:100px;
+}
+#nav .con ul{
+    float:left;
+    overflow:hidden;
+}
+#nav .con ul li{
+    float:left;
+    width:80px;
+    text-align:center;
+    margin-right:20px;
+}
+#nav .con .act{
+    float:right;
+}
+#nav .con .act a{
+    margin-right:10px;
+}
+#nav .focus{
+    color:aqua;
+}
+#nav #sub_nav{
+    display:none;
+    background-color:#fff;
+    position:absolute;
+    z-index:5;
+    width:180px;
+    padding-bottom:20px;
+}
+#nav #sub_nav li{
+    width:100%;
+    height:42px;
+    line-height:42px;
+    margin-left:30px;
+    text-align:left;
+}
+#nav #sub_nav li a{
+    color:#444;
+}
+#nav #sub_nav li a:hover{
+    color:red;
+}
+/*导航栏样式结束*/
+
+/*第１层开始*/
+#layer1{
+    width:1140px;
+    margin:0 auto;
+    overflow:hidden;
+    margin-top:100px;
+}
+#layer1 .lleft{
+    float:left;
+    width:752px;
+    height:452px;
+    margin-right:23px;
+    position:relative;
+}
+#layer1 .lleft p{
+    position:absolute;
+    left:0;
+    color:#fff;
+    padding:10px 20px;
+    width:712px;
+    bottom:0;
+    background-color:rgba(0,0,0,0.3);
+}
+#layer1 .lright{
+    float:right;
+    width:363px;
+}
+#layer1 #imgleft,#layer1 #imgright{
+    font-size:100px;
+    width:50px;
+    text-align:center;
+    color:#444;
+    opacity:0.5;
+    position:absolute;
+    top:50%;
+    height:56px;
+    margin-top:-28px;
+    line-height:36px;
+}
+#layer1 #imgleft:hover,#layer1 #imgright:hover{
+    opacity:1;
+}
+#layer1 #imgright{
+    right:0;
+}
+#layer1 .lright .box{
+    position:relative;
+    height:216px;
+}
+#layer1 .lright .box:nth-child(2){
+    margin-top:20px;
+}
+#layer1 .lright .box .btitle,
+#layer1 .lright .box p{
+    position:absolute
+}
+#layer1 .lright .box .btitle{
+    top:15px;
+    left:15px;
+    background-color:#555;
+    color:#fff;
+    border-radius:3px;
+    font-size:13px;
+    padding:5px;
+}
+#layer1 .lright .box p{
+    bottom:0;
+    left:0;
+    padding:10px 0 10px 20px;
+    width:345px;
+    background-color:rgba(0,0,0,0.5);
+    color:#fff;
+}
+/*第１层结束*/
+
+/*编写第２层样式*/
+#layer2{
+    width:1140px;
+    margin:20px auto;
+    overflow:hidden;
+}
+#layer2 .cleft{
+    width:752px;
+    float:left;
+}
+
+#layer2 .cleft .ccon{
+    background-color:#fff;
+    padding:30px 20px;
+    margin-bottom:20px;
+
+}
+#layer2 .cleft .ccon .cctip{
+    font-size:25px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+#layer2 .cleft .ccon .ccframe{
+    overflow:hidden
+}
+#layer2 .cleft .ccon .ccframe div{
+    float:left;
+}
+#layer2 .cleft .ccon .ccframe .ccright{
+    float:right;
+    width:400px;
+    color:#444;
+}
+#layer2 .cleft .ccon .ccframe .ccright p{
+    margin:30px 20px;
+}
+#layer2 .cleft .ccon .ccframe .ccright .info{
+    margin:0 20px 30px 20px;
+}
+/*发送博客样式编写开始*/
+#layer2 .cleft .send{
+    background-color:#fff;
+    padding:20px 15px;
+}
+#layer2 .cleft .send .stitle{
+    margin:20px 0;
+}
+#layer2 .cleft .send .stitle input{
+    border:solid 1px #ccc;
+    padding:8px 10px;
+}
+#layer2 .cleft .send .sbtn{
+    margin-top:20px;
+}
+#layer2 .cleft .send .sbtn button{
+    padding:10px 20px;
+    border-radius:8px;
+    border:solid 1px #555;
+    font-weight:700;
+    font-size:18px;
+}
+#layer2 .cleft .send .sbtn button:hover{
+    color:#fff;
+    background-color:#555;
+}
+
+/*发送博客样式编写结束*/
+#layer2 .cright{
+    float:right;
+    width:365px;
+    background-color:#fff;
+    padding:30px 0 10px 0
+}
+#layer2 .cright h3,#layer2 .cright .line,
+#layer2 .cright div{
+    margin-left:32px;
+}
+#layer2 .cright div{
+    margin-bottom:20px;
+}
+#layer2 .cright .line{
+    border-bottom:solid 2px #444;
+    width:80px;
+    margin:20px 32px;
+}
+/*第２层代码结束*/
+
+/*中间图片导航样式开始*/
+.bgimg{
+    margin-top:60px;
+    width:100%;
+    height:200px;
+    background:url('/static/images/page_bg1.png') no-repeat;
+    background-size:100%
+}
+/*中间图片导航样式结束*/
+
+/*图片列表样式开始*/
+.items{
+    width:1140px;
+    margin:20px auto;
+    overflow:hidden;
+}
+.items .item{
+    position:relative;
+    float:left;
+    width:270px;
+    margin:0 5px 0 10px;
+}
+.items .item span{
+    position:absolute;
+    padding:3px 5px;
+    background-color:#c02640;
+    color:#fff;
+    font-size:13px;
+    border-radius:3px;
+    top:15px;
+    right:15px;
+}
+.items .item div img{
+    width:270px;
+    height:178px;
+}
+
+.items .item p{
+    margin:10px 25px 20px 25px;
+    font-size:15px;
+    width:220px;
+    height:46px;
+    overflow:hidden;
+}
+
+
+/*中间信息提示栏样式开始*/
+.title{
+    width:1140px;
+    margin:20px auto;
+    overflow:hidden;
+    border-bottom:solid 1px #555;
+}
+.title .ltip{
+    float:left;
+    padding:20px 40px;
+    background-color:#555;
+    color:#fff;
+    font-size:20px;
+}
+.title .rtip{
+    float:right;
+    margin-top:30px;
+}
+/*中间信息提示栏样式结束*/
+
+
+
+
+/*编写底部代码*/
+#footer{
+    width:100%;
+    background-color:#555;
+    color:#f1f1f1
+}
+#footer p{
+    text-align:center;
+    width:1140px;
+    margin:0 auto;
+    height:80px;
+    line-height:80px;
+}
+
+
+
+
+
+
+
+#bg{
+    opacity:0.3;
+    position:fixed;
+}
+#log{
+    width:480px;
+    height:336px;
+    background-color:#fff;
+    border-radius:8px;
+    position:absolute;
+    left:50%;
+    margin-left:-240px;
+    top:50%;
+    margin-top:-168px;
+}
+#log h3{
+    text-align:center;
+    font-size:28px;
+    margin:30px 0;
+}
+#log form{
+    margin-left:30px;
+}
+
+#log form div{
+    margin:20px 0;
+}
+#log form div:nth-child(1){
+    margin-top:30px;
+}
+#log form .txt{
+    width:400px;
+    padding:8px 10px;
+    border:solid 1px #ccc;
+}
+#log form .btn{
+    padding:10px 20px;
+    border-radius:8px;
+    border:solid 1px #555;
+    font-weight:700;
+    font-size:18px;
+}
+#log form .btn:hover{
+    color:#fff;
+    background-color:#555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

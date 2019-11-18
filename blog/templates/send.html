@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/blog.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/scrollReveal.js"></script>
+    <script src="/static/js/wangEditor.js"></script>
+</head>
+<body>
+    <!-- 内嵌导航栏模板文件  -->
+　　{%  include 'header.html' %}
+    {%  import 'macros.html' as index_macro %}
+
+    <div class="bgimg"></div>
+
+    {{ index_macro.list_tip('发表博客','不要轻易放弃，学习成长的路上，我们长路漫漫，只因学无止境')}}
+     <div id="layer2">
+        <div class="cleft">
+            <div class="send">
+                <div class="stitle">
+                    <input type="text" id="title"> &nbsp;文章标题
+                </div>
+                <!--富文本编辑框-->
+                <div id="editor"></div>
+                <div class="sbtn">
+                    <button id="send">发表</button>
+                </div>
+            </div>
+        </div>
+        <div class="cright">
+　　　　　　　<h3>特别推荐</h3>
+            <div class="line"></div>
+
+            {{index_macro.index_img('/static/images/banner01.jpg')}}
+            {{index_macro.index_img('/static/images/banner02.jpg')}}
+            {{index_macro.index_img('/static/images/banner03.jpg')}}
+
+        </div>
+    </div>
+    {%  include 'footer.html' %}
+    <script src="/static/js/index.js"></script>
+    <script>
+        //调用获取焦点样式的函数
+        getFocus($("#l7 a"))
+
+        //实例化富文本编辑框对象
+        var E= window.wangEditor;
+        var editor = new E("#editor")
+        editor.create();
+
+        //编写单击发表按钮的事件
+        $("#send").on("click",function(){
+
+            alert($("#title").val())
+
+            alert(editor.txt.text());
+            alert(editor.txt.html());
+
+        })
+    </script>
+</body>
+</html>

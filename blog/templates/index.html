@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/blog.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/scrollReveal.js"></script>
+</head>
+<body>
+    <!-- 内嵌导航栏模板文件  -->
+　　{%  include 'header.html' %}
+   {%  import 'macros.html' as index_macro %}
+    <div id="layer1">
+        <div class="lleft">
+            <span id="imgleft">&lsaquo;</span>
+            <img width="752" height="452"  src="/static/images/banner01.jpg" id="img" alt="">
+            <span id="imgright">&rsaquo;</span>
+            <p>爬虫微课５小时Python学习路线</p>
+        </div>
+        <div class="lright">
+             {{ index_macro.index_imgad('linux','/static/images/toppic01.jpg','linux升级为p3,安装pip,svn的方法')  }}
+             {{ index_macro.index_imgad('Python','/static/images/toppic02.jpg','精通Python编编程，深入浅出教程')  }}
+        </div>
+        </div>
+    </div>
+    <div id="layer2">
+        <div class="cleft">
+
+            {{index_macro.index_content('Python语言在人工智能方向的优势','/static/images/toppic01.jpg','当前环境，Python的语法在很大程度上适合人工智能领域的代码编写',2560)}}
+            {{index_macro.index_content('Python语言在人工智能方向的优势','/static/images/toppic01.jpg','当前环境，Python的语法在很大程度上适合人工智能领域的代码编写',2560)}}
+            {{index_macro.index_content('Python语言在人工智能方向的优势','/static/images/toppic01.jpg','当前环境，Python的语法在很大程度上适合人工智能领域的代码编写',2560)}}
+
+        </div>
+        <div class="cright">
+　　　　　　　<h3>特别推荐</h3>
+            <div class="line"></div>
+
+            {{index_macro.index_img('/static/images/banner01.jpg')}}
+            {{index_macro.index_img('/static/images/banner02.jpg')}}
+            {{index_macro.index_img('/static/images/banner03.jpg')}}
+
+        </div>
+    </div>
+    {%  include 'footer.html' %}
+    <script src="/static/js/index.js"></script>
+    <script>
+        //调用获取焦点的函数
+        getFocus($("#l1 a"))
+    </script>
+</body>
+</html>
